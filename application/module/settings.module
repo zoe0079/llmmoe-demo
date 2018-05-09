@@ -1,0 +1,30 @@
+<?php
+class settings extends Module {
+	function __construct(){
+		parent::__construct();
+	}
+	
+	function get_all() {
+		return $this->db->query($this->sql
+				->select("settings"));
+	}
+	
+	function get_all_value() {
+		$settings = $this->db->query($this->sql
+				->select("settings"));
+		$result = array();
+		foreach($settings as $_s) {
+			$result[$_s['name']] = $_s['value'];
+		}
+		return $result;
+	}
+	
+	function update(array $value){
+		foreach($value as $name=>$_v) {
+			$this->db->query($this->sql
+					->update("settings", array("value"=>$_v))
+					->where("name", "=", $name));
+		}
+		return true;
+	}
+}

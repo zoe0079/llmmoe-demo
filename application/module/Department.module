@@ -1,0 +1,46 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: llmmoe
+ * Date: 2017/10/28
+ * Time: 21:22
+ */
+namespace app\module;
+use sys\lib\Module;
+
+/**
+ * Class Department
+ * @package app\module
+ */
+class Department extends Module {
+
+    /**
+     * Department constructor.
+     * @throws \Exception
+     */
+    function __construct() {
+        parent::__construct();
+    }
+
+    /**
+     * @param $department
+     * @return array
+     * @throws \Exception
+     */
+    function add($department) {
+        $department['createtime'] = date("Y:m:d H:i:s");
+        $sql = $this->sql->insert("department", $department);
+        return $this->db->query($sql);
+    }
+
+    /**
+     * @param null $data
+     * @param string $table
+     * @return array
+     * @throws \Exception
+     */
+    function find($data = null, $table = "department") {
+        return parent::find($data, $table);
+    }
+
+}

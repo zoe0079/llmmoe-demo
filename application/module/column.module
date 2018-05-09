@@ -1,0 +1,65 @@
+<?php
+/**
+* 栏目
+*/
+class column extends Module {
+    private $column;
+    
+    function __construct() {
+    	parent::__construct();
+    	$this->column = $this->db->query($this->sql
+    			->select("column"));
+    }
+    
+    function getColumn() {
+        return $this->column;
+    }
+    
+    function get_home_page_column(){
+    	return $this->db->query($this->sql
+    			->select("column")
+    			->where("is_in_home_page", "=", "1"));
+    }
+    
+    /**
+     * 获取部门和法庭的栏目
+     */
+    function get_court_column(){
+    	return $this->db->query($this->sql
+    			->select("column")
+    			->where("parent", "=", "6"));
+    }
+    
+    function getInfo($id) {
+    	return current($this->db->query($this->sql
+    			->select("column")
+    			->where("id", "=", $id)));
+    }
+    
+    function findById($id) {
+    	return current($this->db->query($this->sql
+    			->select("column")
+    			->where("id", "=", $id)));
+    }
+    
+    function findByName($name) {
+    	return current($this->db->query($this->sql
+    			->select("column")
+    			->where("name", "=", $name)));
+    }
+    
+    function add(array $value) {
+    	unset($value['id']);
+    	return $this->db->query($this->sql
+    			->insert("column", $value));
+    }
+    
+    function update($value) {
+    	$id = $value['id'];
+		unset($value['id']);
+		return $this->db->query($this->sql
+				->update("column", $value)
+				->where("id", "=", $id));
+    }
+}
+?>

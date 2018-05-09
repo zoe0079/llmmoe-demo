@@ -1,0 +1,106 @@
+<div class="container">
+
+<form class="form-horizontal" role="form" method="post" action="?mod=leave&act=insert<?php if(isset($value['id'])):?>&id=<?php echo $value['id'];endif;?>">
+    <div class="form-group">
+
+        <label class="mr-sm-2">日期</label>
+        <div class="form-row align-items-center">
+
+            <div class="col-auto mb-3">
+                <label class="sr-only" for="start">启始</label>
+                <input type="text" class="form-control mb-2" name="start" id="start" placeholder="年-月-日" value="<?php
+                if(isset($value)){
+                    echo $value['start'];
+                }elseif(isset($error['start'])) {
+                    echo $error['start'];
+                }else{
+                    echo date('Y-m-d');
+                }
+                ?>">
+                <?php if(isset($error['startInfo'])):?>
+                    <div class="alert alert-danger"><?php echo $error['startInfo'];?></div>
+                <?php endif;?>
+            </div>
+
+            <div class="col-auto mb-3">
+                <label class="sr-only" for="end">终止日期</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">到</div>
+                    </div>
+                    <input type="text" class="form-control" name="end" id="end" placeholder="年-月-日" value="<?php
+                    if(isset($value)){
+                        echo $value['end'];
+                    }elseif(isset($error['end'])) {
+                        echo $error['end'];
+                    }else{
+                        echo date('Y-m-d', (time()+3600*24));
+                    }
+                    ?>">
+                    <?php if(isset($error['endInfo'])):?>
+                        <div class="alert alert-danger"><?php echo $error['endInfo'];?></div>
+                    <?php endif;?>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-row align-items-center">
+            <div class="col-auto mb-3">
+                <label for="name">请假人</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="请假人" value="<?php
+                if(isset($value['name'])){
+                    echo $value['name'];
+                }elseif(isset($error['name'])) {
+                    echo $error['name'];
+                }?>" required>
+            </div>
+            <?php if(isset($error['name'])):?>
+                <div class="col-auto mb-3"><div class="alert alert-danger"><?php echo $error['name'];?></div></div>
+            <?php endif;?>
+        </div>
+        <div class="form-row align-items-center">
+            <div class="col-auto mb-3">
+                <label for="leader">批假领导</label>
+                <input type="text" class="form-control" name="leader" id="leader" placeholder="批假领导" value="<?php
+                if(isset($value['leader'])){
+                    echo $value['leader'];
+                }elseif(isset($error['leader'])) {
+                    echo $error['leader'];
+                }?>" required>
+            </div>
+            <?php if(isset($error['leader'])):?>
+                <div class="alert alert-danger"><?php echo $error['leader'];?></div>
+            <?php endif;?>
+        </div>
+        <div class="form-row align-items-center">
+            <div class="col-auto mb-3">
+                <label for="type">请假类型</label>
+                <select class="custom-select" name="type" id="type">
+                    <option value="2"<?php if(isset($value['type']) && $value['type']==2):?> selected<?php endif;?>>病假</option>
+                    <option value="1"<?php if(isset($value['type']) && $value['type']==1):?> selected<?php endif;?>>事假</option>
+                    <option value="3"<?php if(isset($value['type']) && $value['type']==3):?> selected<?php endif;?>>婚假</option>
+                    <option value="4"<?php if(isset($value['type']) && $value['type']==4):?> selected<?php endif;?>>生育假</option>
+                    <option value="5"<?php if(isset($value['type']) && $value['type']==5):?> selected<?php endif;?>>丧假</option>
+                    <option value="6"<?php if(isset($value['type']) && $value['type']==6):?> selected<?php endif;?>>工伤假</option>
+                    <option value="7"<?php if(isset($value['type']) && $value['type']==7):?> selected<?php endif;?>>其他</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row align-items-center">
+            <div class="col-lg-12 mb-3">
+                <label for="reason">事由</label>
+                <textarea class="form-control" name="reason" id="reason" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="form-row align-items-center">
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-2">提交</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+</div>

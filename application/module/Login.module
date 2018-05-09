@@ -1,0 +1,22 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: llmmoe
+ * Date: 2018/2/7
+ * Time: 23:20
+ */
+
+namespace app\module;
+/**
+ * Class Login
+ * @package app\module
+ */
+class Login extends \sys\lib\Module {
+
+    /**
+     * Login constructor.
+     */
+    function __construct() {
+    }
+
+}

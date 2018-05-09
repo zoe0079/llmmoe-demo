@@ -1,0 +1,48 @@
+<div class="container">
+
+    <?php foreach($staffList as $key => $department): ?>
+        <?php if(($key % 2) == 0):?>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+        <?php endif; ?>
+                <div class="col-md-6">
+                    <div class="card bg-light mb-3">
+                        <div class="card-header"><strong><?php echo $department['name'];?></strong></div>
+                            <div class="card-body">
+                                <table class="text-center table-striped">
+                                    <caption><small>注：这只是一个测试版本</small></caption>
+                                    <thead>
+                                        <th scope="col">职务</th>
+                                        <th scope="col" width="20%">姓名</th>
+                                        <th scope="col">电话</th>
+                                        <th></th>
+                                        <th scope="col" width="20%">短号</th>
+                                    </thead>
+                                <?php if(isset($department['position']) && !empty($department['position'])):
+                                    foreach ($department['position'] as $position):
+                                        if(isset($position['staff']) && !empty($position['staff'])):
+                                        foreach ($position['staff'] as $_s):?>
+                                    <tr>
+                                        <td><p class="card-text"><?php echo $position['name']?></p></td>
+                                        <td><a href="?mod=staff&act=info&id=<?php echo $_s['id']?>"><strong><?php _print($_s['name']); ?></strong></a></td>
+                                        <td><a href="tel:<?php echo $_s['phone']; ?>"><?php echo $_s['phone']; ?></a></td>
+                                        <td></td>
+                                        <td><a href="tel:<?php echo $_s['short_phone']; ?>"><?php echo $_s['short_phone']; ?></a></td>
+                                    </tr>
+                                    <?php endforeach;
+                                    endif;
+                                    endforeach;
+                                    endif;?>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+        <?php if(($key % 2) != 0 or $key == count($staffList)-1):?>
+                </div>
+            </div>
+        </div>
+        <?php endif;?>
+    <?php endforeach;?>
+
+</div>

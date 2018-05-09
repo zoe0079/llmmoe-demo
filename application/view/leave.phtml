@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <p class="bs-component">
+        <button id="button" class="btn btn-primary" onclick="window.location.href='?mod=leave&act=add'">添加</button>
+    </p>
+
+    <div class="row">
+
+        <div class="col-lg-auto">
+            <table class="table table-striped table-hover">
+                <thead>
+                <tr>
+                    <th>请假人</th>
+                    <th>请假类别</th>
+                    <th>起始</th>
+                    <th>终止</th>
+                    <th>批假领导</th>
+                    <th>事由</th>
+                    <th></th>
+                </tr>
+                </thead>
+
+
+                <tbody>
+                <?php foreach($leaveList as $k => $v):?>
+                    <tr>
+                        <td><?php echo $v['positionID']?></td>
+                        <td><?php echo $v['type']?></td>
+                        <td><?php echo $v['start']?></td>
+                        <td><?php echo $v['end']?></td>
+                        <td><?php echo $v['leaderID']?></td>
+                        <td width="600px"><?php echo $v['reason']?></td>
+                        <td class="actions">
+                            <a href="?mod=leave&act=update&id=<?php echo $v['id']?>"><span class="badge badge-primary">修改</span></a>&nbsp;&nbsp;
+                            <a href="?mod=leave&act=del&id=<?php echo $v['id']?>"><span class="badge badge-danger">删除</span></a>
+                        </td>
+                    </tr>
+                <?php endforeach;?>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+

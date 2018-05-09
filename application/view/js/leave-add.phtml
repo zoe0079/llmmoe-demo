@@ -1,0 +1,179 @@
+<div class="container">
+    <div class="col-md-auto">
+
+        <form class="form-horizontal" role="form" method="post" action="?mod=leave&act=insert<?php if(isset($value['id'])):?>&id=<?php echo $value['id'];endif;?>">
+            <div class="form-group <?php if(isset($error['nameInfo'])):?>has-error has-feedback<?php endif;?>">
+                <label class="col-md-2 control-label">请假人员</label>
+                <div class="col-md-2">
+                    <input name="name" class="form-control" placeholder="姓名" type="text"
+                           value="<?php if(isset($value)){
+                               echo $value['name'];
+                           }elseif(isset($error['name'])){
+                               echo $error['name'];
+                           }?>">
+                    <?php if(isset($error['nameInfo'])):?>
+                        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                        <div class="alert alert-danger"><?php echo $error['nameInfo'];?></div>
+                    <?php endif;?>
+                </div>
+            </div>
+
+            <div class="form-group <?php if(isset($error['leaderInfo'])):?>has-error has-feedback<?php endif;?>">
+                <label class="col-md-2 control-label">批假领导</label>
+                <div class="col-md-2">
+                    <input name="leader" class="form-control" placeholder="姓名" type="text"
+                           value="<?php if(isset($value)){
+                               echo $value['leader'];
+                           }elseif(isset($error['leader'])){
+                               echo $error['leader'];
+                           }?>">
+                    <?php if(isset($error['leaderInfo'])):?>
+                        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                        <div class="alert alert-danger"><?php echo $error['leaderInfo'];?></div>
+                    <?php endif;?>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-auto">启始日期</label>
+                <div class="col-sm-4">
+                    <input name="start" class="form-control" type="text"
+                           value="<?php
+                           if(isset($value)){
+                               echo $value['start'];
+                           }elseif(isset($error['start'])) {
+                               echo $error['start'];
+                           }else{
+                               echo date('Y-m-d');
+                           }
+                           ?>">
+                    <?php if(isset($error['startInfo'])):?>
+                        <div class="alert alert-danger"><?php echo $error['startInfo'];?></div>
+                    <?php endif;?>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-auto">终止日期</label>
+                <div class="col-sm-4">
+                    <input name="end" class="form-control" type="text"
+                           value="<?php
+                           if(isset($value)){
+                               echo $value['end'];
+                           }elseif(isset($error['end'])) {
+                               echo $error['end'];
+                           }else{
+                               echo date('Y-m-d');
+                           }
+                           ?>">
+                    <?php if(isset($error['endInfo'])):?>
+                        <div class="alert alert-danger"><?php echo $error['endInfo'];?></div>
+                    <?php endif;?>
+                </div>
+            </div>
+
+            <div class="form-group <?php if(isset($error['timeInfo'])):?>has-error has-feedback<?php endif;?>">
+                <label class="col-md-2 control-label">时间</label>
+                <div class="col-sm-3">
+                    <div class="input-group">
+                        <input name="end" id="timepicker2" class="form-control" type="text"
+                               value="<?php
+                               if(isset($value)){
+                                   echo $value['time'];
+                               }elseif(isset($error['time'])) {
+                                   echo $error['time'];
+                               }else{
+                                   echo date('H:i');
+                               } ?>">
+                        <?php if(isset($error['timeInfo'])):?>
+                            <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                            <div class="alert alert-danger"><?php echo $error['timeInfo'];?></div>
+                        <?php endif;?>
+                        <span class="input-group-addon"><i class="mdi mdi-clock"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group <?php if(isset($error['nationInfo'])):?>has-error has-feedback<?php endif;?>">
+                <label class="col-md-2 control-label">来电单位</label>
+                <div class="col-md-4">
+                    <input name="nation" class="form-control" placeholder="单位" type="text"
+                           value="<?php if(isset($value)){
+                               echo $value['nation'];
+                           }elseif(isset($error['nation'])) {
+                               echo $error['nation'];
+                           }?>">
+                    <?php if(isset($error['nationInfo'])):?>
+                        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                        <div class="alert alert-danger"><?php echo $error['nationInfo'];?></div>
+                    <?php endif;?>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-2 control-label">号码</label>
+                <div class="col-md-4">
+                    <input name="tel" class="form-control" placeholder="电话" type="text"
+                           value="<?php if(isset($value)){
+                               echo $value['tel'];
+                           }elseif(isset($error['tel'])){
+                               echo $error['tel'];
+                           }?>">
+                </div>
+            </div>
+
+            <div class="form-group <?php if(isset($error['caseInfo'])):?>has-error has-feedback<?php endif;?>">
+                <label class="col-md-2 control-label">事件</label>
+                <div class="col-md-10">
+                    <textarea name="case" class="form-control" rows="5"><?php
+                        if(isset($value)){
+                            echo $value['case'];
+                        }elseif(isset($error['case'])){
+                            echo $error['case'];
+                        }?></textarea>
+                    <?php if(isset($error['caseInfo'])):?>
+                        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                        <div class="alert alert-danger"><?php echo $error['caseInfo'];?></div>
+                    <?php endif;?>
+                </div>
+            </div>
+
+
+
+            <div class="form-group <?php if(isset($error['handleInfo'])):?>has-error has-feedback<?php endif;?>">
+                <label class="col-md-2 control-label" for="example-email">处理人员</label>
+                <div class="col-md-2">
+                    <input name="handle" class="form-control" placeholder="姓名" type="text"
+                           value="<?php if(isset($value)){
+                               echo $value['handle'];
+                           }elseif(isset($error['handle'])){
+                               echo $error['handle'];
+                           }?>">
+                    <?php if(isset($error['handleInfo'])):?>
+                        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                        <div class="alert alert-danger"><?php echo $error['handleInfo'];?></div>
+                    <?php endif;?>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-2 control-label" for="example-email">处理情况</label>
+                <div class="col-md-10">
+                    <textarea name="state" class="form-control" rows="5"><?php if(isset($value)){
+                            echo $value['state'];
+                        }elseif(isset($error['state'])){
+                            echo $error['state'];
+                        }?></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-2 control-label" for="example-email"></label>
+                <div class="col-md-10">
+                    <button type="submit" class="btn btn-primary waves-effect w-md waves-light m-b-5">提交</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>

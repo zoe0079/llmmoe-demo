@@ -1,0 +1,45 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: llmmoe
+ * Date: 2017/10/28
+ * Time: 21:08
+ */
+namespace app\module;
+use sys\lib\Module;
+use \Exception;
+
+/**
+ * Class position
+ */
+class Position extends Module {
+
+    /**
+     * Position constructor.
+     * @throws Exception
+     */
+    function __construct() {
+        parent::__construct();
+    }
+
+    /**
+     * @param $poition
+     * @throws Exception
+     */
+    function add($poition) {
+        $poition['createtime'] = date("Y:m:d H:i:s");
+        $sql = $this->sql->insert("position", $poition);
+        $this->db->query($sql);
+    }
+
+    /**
+     * @param null $data
+     * @param string $table
+     * @return array
+     * @throws Exception
+     */
+    public function find($data = null, $table = "position") {
+        return parent::find($data, $table);
+    }
+
+}

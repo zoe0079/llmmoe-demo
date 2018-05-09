@@ -1,0 +1,106 @@
+<?php
+class article extends Module {
+	function __construct() {
+		parent::__construct();
+	}
+	
+	function get_article_list($column_id = null, $start = 0, $number = 0) {
+		$sql = $this->sql
+				->select("article", array("id", "title", "author", "column_id", "createtime", "updatetime"));
+		if($column_id != null) $sql->where("column_id", "=", $column_id);
+		$sql->orderby("updatetime", "desc");
+		if($number > 0) $sql->limit($start, $number);
+		return $this->db->query($sql);
+	}
+	
+	function get_headlines($start = 0, $number = 0) {
+		$sql = $this->sql
+				->select("article", array("id", "title", "author", "column_id", "content", "createtime", "updatetime"))
+				->where("column_id", "=", "3")
+				->or_where("column_id", "=", "5")
+				->or_where("column_id", "=", "6")
+				->or_where("column_id", "=", "7")
+				->or_where("column_id", "=", "8")
+				->orderby("updatetime", "desc");
+		if($number > 0) $sql->limit($start, $number);
+		return $this->db->query($sql);
+	}
+	
+	function get_number_by_column($column_id = null) {
+		$sql = $this->sql->select("article", array("id"));
+		if($column_id != null) $sql->where("column_id", "=", $column_id);
+		return count($this->db->query($sql));
+	}
+	
+	function get_article_list_by_column($column_id, $start = 0, $number = 0) {
+		$sql = $this->sql
+				->select("article")
+				->where("column_id", "=", $column_id)
+				->orderby("createtime", "desc");
+		if($number > 0) {
+			$sql->limit($start, $number);
+		}
+		return $this->db->query($sql);
+	}
+	
+	function get_img_article_list($num = 5) {
+		return $this->db->query($this->sql
+				->select("article", array("id", "title", "cover", "createtime"))
+				->where("cover", "!=", "NULL")
+				->where("cover", "!=", "")
+				->orderby("createtime", "desc")
+				->limit(0, $num));
+	}
+	
+	function get_court_article(array $court_column) {
+		$result = array();
+		foreach($court_column as $_cc) {
+			$result[$_cc['id']] = $this->db->query($this->sql
+					->select("article", array("id", "title", "createtime", "cover"))
+					->where("column_id", "=", $_cc['id'])
+					->orderby("createtime", "desc")
+					->limit(0, 7));
+		}
+		return $result;
+	}
+	
+	function get_content($_article_id){
+		$result = $this->db->query($this->sql
+				->select("article")
+				->where("id", "=", $_article_id));
+		return current($result);
+	}
+	
+	function add(array $value) {
+		unset($value['id']);
+		return $this->db->query($this->sql
+				->insert("article", $value));
+	}
+	
+	function update(array $value) {
+		$id = $value['id'];
+		unset($value['id']);
+		$value['updatetime'] = date("Y-m-d H:i:s");
+		return $this->db->query($this->sql
+				->update("article", $value)
+				->where("id", "=", $id));
+	}
+	
+	function delete(array $value) {
+		$sql = $this->sql->delete("article");
+		$sql->where("id", "=", array_pop($value));
+		foreach($value as $_v) {
+			$sql->or_where("id", "=", $_v);
+		}
+		return $this->db->query($sql);
+	}
+	
+	function add_click_times($article_id) {
+		$click_times = current($this->db->query($this->sql
+				->select("article", array("click_times"))
+				->where("id", "=", $article_id)))['click_times'] + 1;
+		return $this->db->query($this->sql
+				->update("article", array("click_times"=>$click_times))
+				->where("id", "=", $article_id));
+	}
+}

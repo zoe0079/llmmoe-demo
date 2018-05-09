@@ -1,0 +1,17 @@
+<?php
+
+/** 
+ * @author llmmoe
+ * 
+ */
+class archives extends Control {
+
+    function __construct() {
+        parent::__construct();
+    }
+
+    function home() {
+        $this->loadView('archivesList');
+    }
+
+}

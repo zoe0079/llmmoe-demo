@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="甘溪镇人民政府, 党政办, ">
+    <meta name="author" content="llmmoe">
+
+    <link rel="shortcut icon" href="/application/view/images/logo-s.ico">
+    <link rel="stylesheet" href="/application/view/css/bootstrap.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/application/view/css/footer.css" crossorigin="anonymous">
+
+    <title><?php echo isset($title) ? $title : "办公OA"?></title>
+</head>
+<body>
+<div id="wrap">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/"><?php echo isset($title) ? $title : "办公OA"?></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" style="">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+<!--            <li class="nav-item active">-->
+<!--                <a class="nav-link" href="--><?php //echo base_url()?><!--">人员<span class="sr-only">(current)</span></a>-->
+<!--            </li>-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">办公室<span class="caret"></span></a>
+                <div class="dropdown-menu" aria-labelledby="themes">
+                    <a class="dropdown-item" href="?mod=staff">人员</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="?mod=incoming">来电</a>
+                    <a class="dropdown-item" href="?mod=leave">请假</a>
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="?mod=search<?php if(isset($title)):?>&id=<?php echo $title;endif;?>" type="text" placeholder="Search">
+            <input class="form-control mr-sm-2" placeholder="查询" type="text">
+            <button type="submit" class="btn btn-outline-light my-2 my-sm-0">查询</button>
+        </form>
+    </div>
+</nav>
+
+<ol class="breadcrumb">
+    <div class="col-xs-12">
+        <div class="page-title-box">
+            <ol class="breadcrumb p-0 m-0">
+                <?php if(isset($breadcrumb)):
+                    foreach($breadcrumb as $url=>$name):?>
+                        <?php if(empty($url)): ?>
+                            <li class="active">
+                                <?php echo $name;?>
+                            </li>
+                            <?php continue;endif;?>
+                        <li>
+                            <a href="<?php echo $url?>"><?php echo $name?></a>
+                        </li>
+                    <?php endforeach;endif; ?>
+                <div class="clearfix"></div>
+            </ol>
+        </div>
+    </div>
+</ol>

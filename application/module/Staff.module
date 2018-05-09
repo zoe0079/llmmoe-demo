@@ -1,0 +1,164 @@
+<?php
+
+/**
+ * Created by PhpStorm.
+ * User: llmmoe
+ * Date: 2017/10/28
+ * Time: 9:22
+ */
+
+namespace app\module;
+use sys\lib\Module;
+use \Exception;
+
+include_once 'Department.module';
+include_once 'Position.module';
+
+class Staff extends Module {
+
+    private $department;
+    private $position;
+
+    /**
+     * Staff constructor.
+     * @throws \Exception
+     */
+    function __construct() {
+        parent::__construct();
+        $this->department = new Department();
+        $this->position = new Position();
+    }
+
+    /**
+     * @param null $data
+     * @param string $table
+     * @return array
+     * @throws \Exception
+     */
+    public function find($data = null, $table = "staff") {
+        return parent::find($data, $table);
+    }
+
+    /**
+     * @param $staff
+     * @throws Exception
+     */
+    public function add($staff) {
+        $data = array();
+        $data['name'] = array_key_exists('name', $staff) ? $staff['name'] : null;
+        $data['is_male'] = array_key_exists('is_male', $staff) ? $staff['is_male'] : 3;
+        $data['positionID'] = array_key_exists('positionID', $staff) ? $staff['positionID'] : null;
+        $data['IDNumber'] = array_key_exists('IDNumber', $staff) ? $staff['IDNumber'] : null;
+        $data['phone'] = array_key_exists('phone', $staff) ? $staff['phone'] : null;
+        $data['short_phone'] = array_key_exists('short_phone', $staff) ? $staff['short_phone'] : null;
+        $data['date_in_political'] = (array_key_exists('date_in_political', $staff) and !empty($data['date_in_political'])) ? $staff['short_phone'] : '0000-01-01';
+        $data['createtime'] = date("Y-m-d H:i:s");
+        $sql = $this->sql->insert("staff", $data);
+        $this->db->query($sql);
+    }
+
+    /**
+     * @param array $value
+     * @param array $where
+     * @return array
+     * @throws Exception
+     */
+    public function update(array $value, array $where) {
+        $value['date_in_political'] = (array_key_exists('date_in_political', $value) and !empty($value['date_in_political'])) ? $value['date_in_political'] : '0000-01-01';
+        $value['birthday'] = (array_key_exists('birthday', $value) and !empty($value['birthday'])) ? $value['birthday'] : '0000-01-01';
+        $value['date_on_job'] = (array_key_exists('date_on_job', $value) and !empty($value['date_on_job'])) ? $value['date_on_job'] : '0000-01-01';
+        $sql = $this->sql->update("staff", $value);
+        foreach($where as $k => $v) {
+            $sql->where($k, "=", $v);
+        }
+        return $this->db->query($sql);
+    }
+
+    /**
+     * @param null $data
+     * @return array
+     * @throws Exception
+     */
+    public function del($data = null) {
+        $sql = $this->sql->delete("staff");
+        if(!empty($data)) {
+            foreach($data as $k => $v) {
+                $sql->where($k, "=", $v);
+            }
+        }
+        return $this->db->query($sql);
+    }
+
+    /**
+     * @param int $positionID
+     * @return null
+     * @throws \Exception
+     */
+    public function getDepartmentByID(int $positionID) {
+        $position = $this->position->find(array(
+                        "id" => $positionID
+        ));
+        if(empty($position)) return null;
+        return $this->department->find(array(
+                        "id" => $position[0]['departmentID']
+        ))[0];
+    }
+
+    /**
+     * @return array
+     * @throws \Exception
+     */
+    public function getListByDepartment() {
+        $department = $this->department->find();
+        foreach ($department as $_dk => $_d) {
+            $position = $this->position->find(array('departmentID' => $_d['id']));
+            if(empty($position)) continue;
+            foreach ($position as $_pk => $_p) {
+                $staff = $this->find(array('positionID' => $_p['id']));
+                if(empty($staff)) continue;
+                $position[$_pk]['staff'] = $staff;
+            }
+            $department[$_dk]['position'] = $position;
+        }
+        return $department;
+    }
+
+    /**
+     * @param string $genre ['official', 'staffing']
+     * @return array
+     * @throws \Exception
+     */
+//    private function getStaffByDepartment($genre='all') {
+//        $staffs = array();
+//        $where = array();
+//        if($genre == 'official') $where = array('status' => '行政');
+//        if($genre == 'staffing') $where = array('status' => '事业');
+//        $department = $this->department->find();
+//        $department_name = null;
+//        $c = 0;
+//        foreach ($department as $d) {
+//            $position = $this->position->find(array('departmentID' => $d['id']));
+//            $point = null;
+//            $count = 0;
+//            foreach ($position as $p) {
+//                $where['positionID'] = $p['id'];
+//                $staff = $this->staff->find($where);
+//                if(empty($staff)) continue;
+//                foreach ($staff as $k => $s) {
+//                    $count++;
+//                    if($department_name!=$d['name']) {
+//                        $point = $c;
+//                        $department_name = $d['name'];
+//                    }
+//                    $c++;
+//                    $staff[$k]['Department'] = $d['name'];
+//                    $staff[$k]['Position'] = $p['name'];
+//                }
+//                $staffs = array_merge($staffs, $staff);
+//                $staffs[$point]['row'] = $count;
+//            }
+//        }
+//        return $staffs;
+//    }
+
+}

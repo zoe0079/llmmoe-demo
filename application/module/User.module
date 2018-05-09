@@ -1,0 +1,67 @@
+<?php
+namespace app\module;
+use sys\lib\Module;
+use \Exception;
+
+/**
+ * Class User
+ * @package app\module
+ */
+class User extends Module {
+
+    /**
+     * User constructor.
+     * @throws Exception
+     */
+    function __construct() {
+        parent::__construct();
+    }
+
+    function get_user_list() {
+    }
+
+    /**
+     * @param $name
+     * @param $password
+     * @return bool
+     * @throws Exception
+     */
+    function can_i_pass($name, $password) {
+        if (empty($this->db->query($this->sql
+                                        ->select("user", array("id", "username", "name", "createtime", "logintimes"))
+                                        ->where("username", "=", $name)
+                                        ->where("password", "=", sha1($password)))))
+            return false;
+        return true;
+    }
+
+    /**
+     * @param $name
+     * @return mixed
+     * @throws Exception
+     */
+    function get_user_info($name) {
+        $result = $this->db->query($this->sql
+                        ->select("user", array("username", "name", "identity", "createtime", "lastlogintime", "logintimes"))
+                        ->where("username", "=", $name));
+        return current($result);
+    }
+
+    /**
+     * @param $name
+     * @return array|bool|\mysqli_result
+     * @throws Exception
+     */
+    function record_login_info($name) {
+        $data = $this->db->query($this->sql
+                        ->select("user", array("logintime", "logintimes"))
+                        ->where("username", "=", $name));
+        $logintimes = current($data)['logintimes'] + 1;
+        $logintime = date("Y-m-d H:i:s");
+        $lastlogintime = empty(current($data)['logintime']) ? $logintime : current($data)['logintime'];
+        return $this->db->query($this->sql
+                                ->update("user", array("lastlogintime" => $lastlogintime, "logintime" => $logintime, "logintimes" => $logintimes))
+                                ->where("username", "=", $name));
+    }
+
+}

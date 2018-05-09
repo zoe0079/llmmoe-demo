@@ -1,0 +1,69 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="<?php echo VIEW_DIR;?>js/jquery-3.2.1.min.js"></script>
+</head>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.b01').click(function(){
+            var htmlobj = $.ajax({
+                type:"POST",
+                url:"/user.txt",
+                dataType:"json",
+                async:false,
+            });
+            // alert(htmlobj);
+            $('.myDiv').html(htmlobj.responseText);
+        });
+    });
+</script>
+
+<!-- CSS goes in the document HEAD or added to your external stylesheet -->
+<style type="text/css">
+    table.hovertable {
+        font-family: verdana,arial,sans-serif;
+        font-size:11px;
+        color:#333333;
+        border-width: 1px;
+        border-color: #999999;
+        border-collapse: collapse;
+    }
+    table.hovertable th {
+        background-color:#c3dde0;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #a9c6c9;
+    }
+    table.hovertable tr {
+        background-color:#d4e3e5;
+    }
+    table.hovertable td {
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #a9c6c9;
+    }
+</style>
+
+<body>
+<table class="hovertable">
+    <tr>
+        <th>部门</th>
+        <th>职务</th>
+        <th>姓名</th>
+        <th>电话</th>
+        <th>短号</th>
+    </tr>
+    <?php foreach ($staffs as $s) {?>
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+        <td><?php echo $s['department']['name'];?></td>
+        <td><?php echo $s['position']['name'];?></td>
+        <td><?php echo $s['name'];?></td>
+        <td><?php echo $s['phone'];?></td>
+        <td><?php echo $s['short_phone'];?></td>
+    </tr>
+    <?php }?>
+</table>
+</body>
+</html>

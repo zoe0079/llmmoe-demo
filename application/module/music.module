@@ -1,0 +1,17 @@
+<?php
+class music extends Module{
+	private static $music = null;
+	
+	function __construct() {
+		$this->loadLib("File_scan");
+		if(music::$music == null) {
+			music::$music = new File_scan("application/files/music", array("mp3"));
+		}
+		music::$music = music::$music->files;
+	}
+	
+	function get_music() {
+		return music::$music;
+	}
+}
+?>

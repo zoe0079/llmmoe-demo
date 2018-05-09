@@ -1,0 +1,56 @@
+<form action="<?php echo base_url()?>?mod=archives&act=upload" method="post" enctype="multipart/form-data">
+	<label for="file">上传附件：</label> <input type="file" name="file" id="file" />
+	<br />
+	<input type="submit" name="submit" value=" 上传 " />
+</form>
+<table>
+	<tr>
+		<td colspan="2">
+    		<input name="font" class="tiny-short" type="text">
+    		<input name="type" type="radio" value="" />发 
+    		<input name="type" type="radio" value="" />办 
+    		<input name="type" type="radio" value="" />字
+    		<input name="type" type="radio" value="" />函 
+    		<input name="type" type="radio" value="" />呈 〔
+    		<input name="numberOfYear" class="tiny" type="text" value="<?php echo date('Y');?>"> 〕 
+    		<input name="number" class="tiny" type="text">号
+		</td>
+	</tr>
+	<tr>
+		<td class="right">发文单位</td>
+		<td class="left"><input name="unit" class="long" type="text"></td>
+	</tr>
+	<tr>
+		<td class="right">密级</td>
+		<td class="left"><input name="level" class="tiny-short" type="text"></td>
+	</tr>
+	<tr>
+		<td class="right">收发文时间</td>
+		<td class="left"><input name="date" class="short" type="text"
+			value="<?php echo date('Y-m-d')?>"></td>
+	</tr>
+	<tr>
+		<td class="right">标题</td>
+		<td class="left"><input name="title" class="long" type="text"></td>
+	</tr>
+	<tr>
+		<td class="right">分发范围</td>
+		<td class="left"><input name="area" class="long" type="text"></td>
+	</tr>
+	<tr>
+		<td class="right top">领导阅签</td>
+		<td class="left"><textarea name="sign"></textarea></td>
+	</tr>
+	<tr>
+		<td class="right top">拟办意见</td>
+		<td class="left"><textarea name="opinion"></textarea></td>
+	</tr>
+	<tr>
+		<td class="right top">办理结果</td>
+		<td class="left"><textarea name="result"></textarea></td>
+	</tr>
+	<tr>
+		<td class="right">合号</td>
+		<td class="left"><input name="archive-number" class="tiny" type="text"></td>
+	</tr>
+</table>

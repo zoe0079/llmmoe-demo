@@ -1,0 +1,109 @@
+<?php
+/**
+ * 2017年12月30日
+ * @author llmmoe
+ *
+ */
+class file extends Module {
+
+    private $upload;
+    
+	function __construct(){
+		parent::__construct();
+		$this->loadLib("Upload");
+		$this->upload = new Upload();
+	}
+	
+	function save() {
+	    $file = $this->upload->save();
+	    $this->db->query($this->sql->insert("uploads", $file));
+	    $file = $this->db->query($this->sql->select("uploads", array("id"))->where("name", "=", $file['name']));
+	    if(empty($file)) return 0;
+	    return $file[0]['id'];
+	}
+	
+	function get_file($id) {
+		return current($this->db->query($this->sql
+				->select("file")
+				->where("id", "=", $id)));
+	}
+	
+	function get_file_list($start = 0, $num = 0) {
+		$sql = $this->sql
+				->select("file")
+				->orderby("createtime","desc");
+		if($num > 0) $sql->limit($start, $num);
+		return $this->db->query($sql);
+	}
+	
+	function get_num() {
+		return count($this->db->query($this->sql
+				->select("file", array("id"))));
+	}
+	
+	function upload() {
+		if(!isset($_FILES['file'])) throw new Exception("文件上传失败，可能是文件太大");
+		if($_FILES['file']['error'] > 0) {
+			throw new Exception("文件上传失败：".$_FILES['file']['error']."<br />
+					1 | UPLOAD_ERR_INI_SIZE   | Size exceeds upload_max_filesize in php.ini.<br />
+					2 | UPLOAD_ERR_FORM_SIZE  | Size exceeds MAX_FILE_SIZE specified in HTML form.<br />
+					3 | UPLOAD_ERR_PARTIAL    | 文件没有完整上传<br />
+					4 | UPLOAD_ERR_NO_FILE    | 没有上传文件<br />
+					5 | UPLOAD_ERROR_E        | As expliained by @Progman, removed in rev. 81792<br />
+					6 | UPLOAD_ERR_NO_TMP_DIR | 找不到临时文件夹<br />
+					7 | UPLOAD_ERR_CANT_WRITE | 磁盘不可写<br />
+					8 | UPLOAD_ERR_EXTENSION  | File upload stopped by extension.<br />");
+		}else{
+			$filename_GBK = iconv('UTF-8', 'GBK', $_FILES['file']['name']);
+			$filename_UTF8 = $_FILES['file']['name'];
+			if(file_exists("application/upload/".$filename_GBK)) {
+				throw new Exception("文件".$filename_UTF8."已存在，如果确实需要上传这个文件，请改名后再上传。");
+			}else{
+				$is_img = $this->is_img($_FILES['file']['type']);
+				$result = $this->db->query($this->sql
+						->insert("file", array(
+								"url" 		 => "application/upload/".$filename_UTF8,
+								"name" 		 => $filename_UTF8,
+								"createtime" => date("Y-m-d H:i:s"),
+								"type" 		 => $_FILES['file']['type'],
+								"size" 		 => $_FILES['file']['size'],
+								"is_img" 	 => $is_img ? 1 : 0
+						)));
+				move_uploaded_file($_FILES['file']['tmp_name'],
+						"application/upload/".$filename_GBK);
+			}
+		}
+		return $result;
+	}
+	
+	function delete(array $value) {
+		$sql = new Sql(db_name);
+		$id = array_pop($value);
+		$file = $this->get_file($id);
+		
+		$sql = $sql->delete("file");
+		$sql->where("id", "=", $id);
+		if(file_exists($file['url']))
+			unlink($file['url']);
+		
+		foreach($value as $_v) {
+			$sql->or_where("id", "=", $_v);
+			$file = $this->get_file($_v);
+			if(file_exists($file['url']))
+				unlink($file['url']);
+		}
+		return $this->db->query($sql);
+	}
+	
+	function is_img($type){
+		if(stristr($type, "jpeg") ||
+			stristr($type, "jpg") ||
+			stristr($type, "png") ||
+			stristr($type, "gif") ||
+			stristr($type, "bmp") ||
+			stristr($type, "ico") ||
+			stristr($type, "gif") )
+			return true;
+		return false;
+	}
+}

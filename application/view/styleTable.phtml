@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>甘溪镇人员名单（2017.10）</title>
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo view_url();?>css/css-table.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo view_url();?>css/button.css" />
+<script type="text/javascript" src="<?php echo view_url();?>js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="<?php echo view_url();?>js/style-table.js"></script>
+</head>
+
+<body>
+	<h2 align="center">甘溪镇干部职工名单（2017.10）</h2>
+	<a href="<?php echo base_url();?>"><button class="button button-pill button-primary button-small">首页</button></a>
+	<form id="genre" action="<?php echo base_url()."?mod=home&act=staffList"?>" method="post">
+		<select name="genre">
+			<option value="all" <?php if($state['genre']=='all') echo 'selected="selected"'?>>全部</option>
+			<option value="official" <?php if($state['genre']=='official') echo 'selected="selected"'?>>行政编制</option>
+			<option value="staffing" <?php if($state['genre']=='staffing') echo 'selected="selected"'?>>事业编制</option>
+		</select>
+		<button type="submit" class="button button-pill button-primary button-small">查询</button>
+	</form>
+	
+	
+	<form id="notice" action="<?php echo base_url()?>?mod=notice&act=list" method="post">
+	<button class="button button-pill button-primary button-small" type="submit">通知</button>
+		<table id="travel">
+			<thead>
+				<tr>
+					<th scope="col" rowspan="2">部门</th>
+					<th scope="col" colspan="6">人员信息</th>
+				</tr>
+				<tr>
+					<th scope="col">职务</th>
+					<th scope="col">姓名</th>
+					<th scope="col">电话</th>
+					<th scope="col">短号</th>
+				</tr>
+			</thead>
+
+			<tbody>
+            <?php
+            foreach ($staffs as $s) {
+                ?>
+                <tr id="<?php echo $s['id'] ?>">
+                    <?php if(array_key_exists("row", $s)){?>
+                        <th class="<?php echo $s['Department']?>"
+						onclick="selected_department('<?php echo $s['Department']?>')"
+						scope="row" rowspan="<?php echo $s['row']?>"><?php echo $s['Department']?></th>
+                    <?php }?>
+                    <td onclick="selected_row('<?php echo $s['id'] ?>')"><?php echo $s['Position']?></td>
+					<td><input id="<?php echo $s['id'] ?>"
+                               class="<?php echo $s['Department']?>" type="checkbox"
+                               style="display: none" name="<?php echo $s['id']?>" /><a
+						href="<?php echo base_url()."?mod=staff&act=info&id=".$s['id'] ?>"><?php echo $s['name']?></a></td>
+					<td><?php echo $s['phone']?></td>
+					<td><?php echo $s['short_phone']?></td>
+				</tr>
+            <?php }?>
+        </tbody>
+
+			<tfoot>
+				<tr>
+					<th scope="row">合计</th>
+					<td></td>
+					<td><?php echo count($staffs)?></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tfoot>
+		</table>
+	</form>
+	<script type="application/javascript">
+    function selected_department(cls) {
+        // alert($("th."+cls+" td.odd").value);
+        // // alert(cls);
+        $("input."+cls).each(function(){
+            if($(this).attr("checked")) {
+                $(this).removeAttr("checked");
+            } else {
+                $(this).attr("checked","true");
+            }
+        })
+        selected_color();
+    }
+
+    function selected_row(id){
+        // alert(id);
+        $(":input[name='"+id+"']").each(function(){
+            if($(this).attr("checked")) {
+                $(this).removeAttr("checked");
+                $("tr#"+id).css({color:"black"});
+            } else {
+                $("tr#"+id).css({color:"red"});
+                $(this).attr("checked","true");
+            }
+        })
+        selected_color();
+    }
+
+    function selected_color() {
+        $(":input[type='checkbox']").each(function(){
+            if($(this).is('checked')) {
+                // alert($(this).id);
+                $(this).css({color:"red"});
+            }
+        })
+    }
+</script>
+</body>
+</html>
