@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/application/view/staffList.phtml" line="3" mnemonic="9" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2fc9dbe6-47ee-479a-a46a-37225011c581" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ganxi@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ganxi@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ganxi@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ganxi: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ganxi@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ganxi: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="leave: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ganxi" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="leave.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/control/leave.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="684">
+              <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+              <folding>
+                <element signature="e#6#87#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="incoming.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/control/incoming.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1728">
+              <caret line="101" column="38" selection-start-line="101" selection-start-column="38" selection-end-line="101" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="leave.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/view/leave.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="leave-add.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/view/leave-add.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Staff.module" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/module/Staff.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="792">
+              <caret line="50" column="32" lean-forward="true" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>assets/</find>
+      <find>form</find>
+      <find>datepicker2</find>
+      <find>id</find>
+      <find>sun</find>
+      <find>set</find>
+      <find>insert</find>
+      <find>3</find>
+      <find>gradeX</find>
+      <find>edit-row</find>
+      <find>DataTable.defaults</find>
+      <find>\'</find>
+      <find>default</find>
+      <find>goog</find>
+      <find>googleapis</find>
+      <find>google</find>
+      <find>table</find>
+      <find>tr</find>
+      <find>td</find>
+      <find>font-</find>
+      <find>font</find>
+      <find>font-family</find>
+      <find>url</find>
+      <find>add</find>
+      <find>'\\app\\ctrl\\'</find>
+      <find>Exception</find>
+      <find>body</find>
+      <find>incoming</find>
+      <find>$position</find>
+      <find>$value</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>$excel</replace>
+      <replace>departmentID</replace>
+      <replace>positionID</replace>
+      <replace>sys\lib\Load</replace>
+      <replace>sys\lib\Load::</replace>
+      <replace>'</replace>
+      <replace>viewUrl</replace>
+      <replace>&lt;?php echo viewUrl()?&gt;assets/</replace>
+      <replace>isset</replace>
+      <replace>&quot;</replace>
+      <replace>NAMESPACE_CTR</replace>
+      <replace>\Exception</replace>
+      <replace>leave</replace>
+      <replace>$result</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/application/module/Staff.php" />
+        <option value="$PROJECT_DIR$/application/view/staffList.php" />
+        <option value="$PROJECT_DIR$/application/view/login.php" />
+        <option value="$PROJECT_DIR$/system/lib/Load.inc.php" />
+        <option value="$PROJECT_DIR$/application/module/User.module" />
+        <option value="$PROJECT_DIR$/application/module/Position.module" />
+        <option value="$PROJECT_DIR$/application/view/login.phtml" />
+        <option value="$PROJECT_DIR$/application/control/login.php" />
+        <option value="$PROJECT_DIR$/application/module/Login.module" />
+        <option value="$PROJECT_DIR$/system/lib/Sql.inc" />
+        <option value="$PROJECT_DIR$/system/lib/Database.inc" />
+        <option value="$PROJECT_DIR$/system/lib/Ajax.inc" />
+        <option value="$PROJECT_DIR$/system/lib/Global.php" />
+        <option value="$PROJECT_DIR$/application/module/incoming.module" />
+        <option value="$PROJECT_DIR$/application/view/add.module" />
+        <option value="$PROJECT_DIR$/application/view/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" />
+        <option value="$PROJECT_DIR$/application/view/toolBar.phtml" />
+        <option value="$PROJECT_DIR$/application/control/Home.php" />
+        <option value="$PROJECT_DIR$/application/module/Incoming.module" />
+        <option value="$PROJECT_DIR$/application/view/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/system/lib/Load.inc" />
+        <option value="$PROJECT_DIR$/system/lib/Excel.inc" />
+        <option value="$PROJECT_DIR$/system/lib/Control.inc" />
+        <option value="$PROJECT_DIR$/application/module/Staff.module" />
+        <option value="$PROJECT_DIR$/application/control/InsertFromExcel.php" />
+        <option value="$PROJECT_DIR$/application/control/staff.php" />
+        <option value="$PROJECT_DIR$/application/view/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/application/view/add.phtml" />
+        <option value="$PROJECT_DIR$/application/view/incoming.phtml" />
+        <option value="$PROJECT_DIR$/application/view/staffList.phtml" />
+        <option value="$PROJECT_DIR$/application/view/staffInfo.phtml" />
+        <option value="$PROJECT_DIR$/application/view/js/leave-add.phtml" />
+        <option value="$PROJECT_DIR$/application/control/leaveing.php" />
+        <option value="$PROJECT_DIR$/application/control/incoming.php" />
+        <option value="$PROJECT_DIR$/system/config/config.php" />
+        <option value="$PROJECT_DIR$/application/control/error.php" />
+        <option value="$PROJECT_DIR$/application/control/home.php" />
+        <option value="$PROJECT_DIR$/system/lib/Go.inc" />
+        <option value="$PROJECT_DIR$/application/view/home.phtml" />
+        <option value="$PROJECT_DIR$/application/view/test.html" />
+        <option value="$PROJECT_DIR$/application/view/css/footer.css" />
+        <option value="$PROJECT_DIR$/application/view/head.phtml" />
+        <option value="$PROJECT_DIR$/application/view/incoming-add.phtml" />
+        <option value="839bf445-9552-47f3-8cfe-e5a3eca95c92/schema/ganxi/table/leave.sql" />
+        <option value="$PROJECT_DIR$/system/lib/Module.inc" />
+        <option value="$PROJECT_DIR$/application/control/leave.php" />
+        <option value="$PROJECT_DIR$/application/view/leave-add.phtml" />
+        <option value="$PROJECT_DIR$/application/view/leave.phtml" />
+        <option value="$PROJECT_DIR$/application/module/Leave.module" />
+        <option value="$PROJECT_DIR$/application/view/foot.phtml" />
+        <option value="$PROJECT_DIR$/index.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpTemplates">
+    <option name="NEW_PHP_FILE_LAST_EXTENSION" value="phtml" />
+    <option name="NEW_PHP_CLASS_LAST_EXTENSION" value="module" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="392" />
+    <option name="y" value="132" />
+    <option name="width" value="1005" />
+    <option name="height" value="648" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Code SmellPHP</id>
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+          <State>
+            <id>PHP Strict StandardsPHP</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PhpSignatureMismatchDuringInheritanceInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <showMembers ProjectPane="false" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ganxi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ganxi" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ganxi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ganxi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ganxi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ganxi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="control" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ganxi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ganxi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ganxi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ganxi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ganxi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ganxi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="system" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
+    <property name="ToolWindowStructure.ShowToolbar" value="false" />
+    <property name="ToolWindowTODO.ShowToolbar" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zircos/Admin/default" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\server\ganxi\application\view\images" />
+      <recent name="F:\server\ganxi\upload\imgs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\server\ganxi\application\view\images" />
+      <recent name="F:\server\ganxi\upload" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+    <option name="myConnectionType" value="NONE" />
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_MODE" value="false" />
+    <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2fc9dbe6-47ee-479a-a46a-37225011c581" name="Default" comment="" />
+      <created>1516582581773</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1516582581773</updated>
+      <workItem from="1516582587992" duration="393000" />
+      <workItem from="1516583506802" duration="3657000" />
+      <workItem from="1516621198987" duration="7130000" />
+      <workItem from="1516673190572" duration="545000" />
+      <workItem from="1516706382849" duration="8357000" />
+      <workItem from="1516721005337" duration="1601000" />
+      <workItem from="1516967619585" duration="71000" />
+      <workItem from="1517058731964" duration="3393000" />
+      <workItem from="1517139494346" duration="1524000" />
+      <workItem from="1517285873807" duration="1138000" />
+      <workItem from="1517414478147" duration="7359000" />
+      <workItem from="1517540230713" duration="2559000" />
+      <workItem from="1517635870348" duration="1285000" />
+      <workItem from="1517662609357" duration="1787000" />
+      <workItem from="1517798357146" duration="6430000" />
+      <workItem from="1517987278339" duration="20978000" />
+      <workItem from="1519803485170" duration="2248000" />
+      <workItem from="1520306512931" duration="1605000" />
+      <workItem from="1520321051373" duration="10445000" />
+      <workItem from="1520342390695" duration="11380000" />
+      <workItem from="1520384297287" duration="34494000" />
+      <workItem from="1520910809588" duration="613000" />
+      <workItem from="1520947891637" duration="2462000" />
+      <workItem from="1521026353674" duration="38000" />
+      <workItem from="1521026548066" duration="3221000" />
+      <workItem from="1521470660323" duration="1521000" />
+      <workItem from="1521550837728" duration="6223000" />
+      <workItem from="1521557211791" duration="2244000" />
+      <workItem from="1521636745457" duration="4549000" />
+      <workItem from="1521947067670" duration="32049000" />
+      <workItem from="1522034728733" duration="5957000" />
+      <workItem from="1522051496505" duration="656000" />
+      <workItem from="1522218403613" duration="2896000" />
+      <workItem from="1522498225877" duration="5343000" />
+      <workItem from="1522546514071" duration="637000" />
+      <workItem from="1522547502541" duration="10838000" />
+      <workItem from="1522718131241" duration="908000" />
+      <workItem from="1522892803346" duration="2677000" />
+      <workItem from="1522947330872" duration="2641000" />
+      <workItem from="1523003646354" duration="4787000" />
+      <workItem from="1523063635479" duration="5816000" />
+      <workItem from="1523175078823" duration="2247000" />
+      <workItem from="1523346206908" duration="18746000" />
+      <workItem from="1523522632803" duration="626000" />
+      <workItem from="1524034547503" duration="3297000" />
+      <workItem from="1524625109411" duration="556000" />
+      <workItem from="1525875520139" duration="1336000" />
+    </task>
+    <task id="LOCAL-00001" summary="test">
+      <created>1525878074606</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1525878074606</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="251263000" />
+  </component>
+  <component name="TodoView" selected-index="2">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48987854" visible="true" weight="0.17095116" />
+      <window_info anchor="right" auto_hide="true" x="25" y="311" width="1550" height="238" id="TODO" order="3" sideWeight="0.41415465" weight="0.25385603" />
+      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
+      <window_info anchor="right" auto_hide="true" x="22" y="354" width="1556" height="152" id="Event Log" order="4" sideWeight="0.32241154" side_tool="true" weight="0.18059126" />
+      <window_info anchor="right" id="Database" order="2" sideWeight="0.67758846" weight="0.15681234" />
+      <window_info anchor="bottom" id="Database Changes" order="7" weight="0.3292683" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3292683" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" sideWeight="0.51012146" side_tool="true" weight="0.30462724" />
+      <window_info anchor="right" x="22" y="308" width="1556" height="244" id="Terminal" order="5" sideWeight="0.41415465" side_tool="true" weight="0.25385603" />
+      <window_info id="Favorites" order="2" sideWeight="0.51012146" side_tool="true" weight="0.15809768" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info content_ui="combo" x="840" y="262" width="329" height="740" id="Hierarchy" order="3" sideWeight="0.4600262" weight="0.21015424" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="8" weight="0.2571042" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.352459" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/system/lib/Database.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/add.module" />
+    <entry file="file://$PROJECT_DIR$/application/module/Login.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" />
+    <entry file="file://$PROJECT_DIR$/application/module/Department.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/_types.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/plugins/jquery-datatables-editable/jquery.dataTables.js" />
+    <entry file="file://$PROJECT_DIR$/application/view/toolBar.phtml" />
+    <entry file="file://$PROJECT_DIR$/application/view/css/bootstrap-reboot.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/css/bootstrap-grid.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="5" column="1031" selection-start-line="5" selection-start-column="1031" selection-end-line="5" selection-end-column="1031" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="124" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/f5d09514/839bf445-9552-47f3-8cfe-e5a3eca95c92/ganxi.staff">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_8.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="1029" column="9" selection-start-line="1029" selection-start-column="9" selection-end-line="1029" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/lib/Excel.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/lib/PhpSpreadsheet/src/Bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/lib/Load.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/control/InsertFromExcel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/control/staff.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="369" column="20" selection-start-line="369" selection-start-column="20" selection-end-line="369" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/staffList.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/js/leave-add.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="165" column="38" lean-forward="true" selection-start-line="165" selection-start-column="38" selection-end-line="165" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/staffInfo.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="126" column="27" selection-start-line="126" selection-start-column="27" selection-end-line="126" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/control/error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/styleTable.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/css/footer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/test.html" />
+    <entry file="file://$PROJECT_DIR$/application/view/home.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/control/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/lib/Go.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/notice.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/lib/Control.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/head.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/incoming.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/incoming-add.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://839bf445-9552-47f3-8cfe-e5a3eca95c92/schema/ganxi/table/leave.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/lib/Global.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/lib/Module.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="38" column="7" lean-forward="true" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/module/Position.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/lib/Sql.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://839bf445-9552-47f3-8cfe-e5a3eca95c92/schema/ganxi/table/leave">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/module/Incoming.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/module/Leave.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/control/leave.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/foot.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/module/Staff.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="50" column="32" lean-forward="true" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/leave-add.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/leave.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/control/incoming.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1728">
+          <caret line="101" column="38" selection-start-line="101" selection-start-column="38" selection-end-line="101" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.25375" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
